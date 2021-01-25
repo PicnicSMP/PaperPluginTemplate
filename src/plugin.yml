@@ -1,0 +1,9 @@
+main: xyz.picnicnet.paperplugintemplate.PaperPlugin
+name: PaperPlugin
+version: 0.0.0.250121
+author: David
+api-version: 1.16
+
+
+commands:
+  

@@ -1,6 +1,6 @@
 run/*
-bin/*
-!run/Spigot/eula.txt
+target/*
+!run/Paper/eula.txt
 org.eclipse.jdt.core.prefs
-BuildTools/*
-/target/
+
+

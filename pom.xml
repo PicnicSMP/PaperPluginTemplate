@@ -18,9 +18,11 @@
 			<plugin>
 		        <artifactId>maven-compiler-plugin</artifactId>
 		        <version>3.8.1</version>
+		        <!--
 		        <configuration>
-		          <release>14</release>
+		          <release>11</release>
 		        </configuration>
+		        -->
 			</plugin>
 			<plugin>
 			  <groupId>com.googlecode.maven-download-plugin</groupId>
@@ -35,7 +37,7 @@
 			      <configuration>
 			        <url>https://papermc.io/api/v2/projects/paper/versions/1.16.5/builds/444/downloads/paper-1.16.5-444.jar</url>
 			        <outputFileName>paper.jar</outputFileName>
-			        <outputDirectory>${project.build.directory}/paper</outputDirectory>
+			        <outputDirectory>${project.basedir}/run/paper</outputDirectory>
 			      </configuration>
 			    </execution>
 			  </executions>
@@ -46,7 +48,7 @@
 			    <version>2.4</version>
 			    <executions>
 			        <execution>
-			            <id>copy paper</id>
+			            <id>copy jar</id>
 			            <phase>install</phase>
 			            <goals>
 			                <goal>copy</goal>
@@ -60,7 +62,7 @@
 				                    <type>${project.packaging}</type>
 					              	<type>jar</type>
 					              	<overWrite>true</overWrite>
-					              	<outputDirectory>${project.build.directory}/paper/plugins</outputDirectory>
+					              	<outputDirectory>${project.basedir}/run/paper/plugins</outputDirectory>
 					              	<destFileName>${project.artifactId}.jar</destFileName>
 					            </artifactItem>
 				          	</artifactItems>
